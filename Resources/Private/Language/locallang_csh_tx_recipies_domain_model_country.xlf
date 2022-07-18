@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:recipies/Resources/Private/Language/locallang_csh_tx_recipies_domain_model_country.xlf" date="2022-03-07T11:15:21Z" product-name="recipies">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="teaser.description" resname="teaser.description">
+				<source>teaser</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="flag.description" resname="flag.description">
+				<source>flag</source>
+			</trans-unit>
+			<trans-unit id="media.description" resname="media.description">
+				<source>media</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

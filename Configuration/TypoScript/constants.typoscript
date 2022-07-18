@@ -1,0 +1,70 @@
+plugin.tx_recipies_default {
+    view {
+        # cat=plugin.tx_recipies_default/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:recipies/Resources/Private/Templates/
+        # cat=plugin.tx_recipies_default/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:recipies/Resources/Private/Partials/
+        # cat=plugin.tx_recipies_default/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:recipies/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_recipies_default//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_recipies_countries {
+    view {
+        # cat=plugin.tx_recipies_countries/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:recipies/Resources/Private/Templates/
+        # cat=plugin.tx_recipies_countries/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:recipies/Resources/Private/Partials/
+        # cat=plugin.tx_recipies_countries/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:recipies/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_recipies_countries//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_recipies_top {
+    view {
+        # cat=plugin.tx_recipies_top/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:recipies/Resources/Private/Templates/
+        # cat=plugin.tx_recipies_top/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:recipies/Resources/Private/Partials/
+        # cat=plugin.tx_recipies_top/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:recipies/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_recipies_top//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_recipies_vegan {
+    view {
+        # cat=plugin.tx_recipies_vegan/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:recipies/Resources/Private/Templates/
+        # cat=plugin.tx_recipies_vegan/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:recipies/Resources/Private/Partials/
+        # cat=plugin.tx_recipies_vegan/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:recipies/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_recipies_vegan//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}
+plugin.tx_recipies_fast {
+    view {
+        # cat=plugin.tx_recipies_fast/file; type=string; label=Path to template root (FE)
+        templateRootPath = EXT:recipies/Resources/Private/Templates/
+        # cat=plugin.tx_recipies_fast/file; type=string; label=Path to template partials (FE)
+        partialRootPath = EXT:recipies/Resources/Private/Partials/
+        # cat=plugin.tx_recipies_fast/file; type=string; label=Path to template layouts (FE)
+        layoutRootPath = EXT:recipies/Resources/Private/Layouts/
+    }
+    persistence {
+        # cat=plugin.tx_recipies_fast//a; type=string; label=Default storage PID
+        storagePid =
+    }
+}

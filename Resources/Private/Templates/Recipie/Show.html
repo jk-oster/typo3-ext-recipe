@@ -1,0 +1,127 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default" />
+
+<f:section name="content">
+    <article class="row col-12 p-0">
+
+        <f:if condition="{recipie.media}">
+            <f:for each="{recipie.media}" as="image" iteration="iterator">
+                <f:if condition="{iterator.cycle} == 1">
+                    <f:image src="{image.originalResource.publicUrl}" class="img-fluid" maxHeight="720"/>
+                </f:if>
+            </f:for>
+        </f:if>
+        <h2 class="h1 mt-2">{recipie.title}</h2>
+        <h3 class="lead">by {recipie.author}</h3>
+        <p>
+            {recipie.teaser}
+        </p>
+        <table class="table">
+            <tbody>
+            <tr>
+                <th scope="row">Bewertung</th>
+                <td>
+                    <v:iterator.loop count="{recipie.rating}">⭐</v:iterator.loop>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Kommentare</th>
+                <td>
+                    💬
+                    <f:count subject="{recipie.reviews}"></f:count>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Koch- und Vorbereitungszeit</th>
+                <td colspan="2">
+                    {recipie.preparationTime} min
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Vegetarisch</th>
+                <td colspan="2">
+                    <f:if condition="{recipie.vegetarian}">
+                        <f:then>✅</f:then>
+                        <f:else>❌</f:else>
+                    </f:if>
+                </td>
+            </tr>
+            <tr>
+                <th scope="row">Vegan</th>
+                <td colspan="2">
+                    <f:if condition="{recipie.vegan}">
+                        <f:then>✅</f:then>
+                        <f:else>❌</f:else>
+                    </f:if>
+                </td>
+            </tr>
+
+            <tr>
+                <th>
+                    Von
+                </th>
+                <td>
+                    <f:for each="{recipie.countries}" as="country">
+                        <div>
+                            <f:link.action action="show" pageUid="{settings.country.detailPage}" pluginName="Countries"
+                                           controller="Country" arguments="{country : country}">{country.title}
+                            </f:link.action>
+
+                            <f:if condition="{country.flag.originalResource.publicUrl}">
+                                <f:image src="{country.flag.originalResource.publicUrl}"
+                                         class="img-fluid rounded img-thumbnail"
+                                         alt="..."
+                                         style="object-fit: cover; height: 100%;" maxWidth="40" maxHeight="30"/>
+                            </f:if>
+                        </div>
+                    </f:for>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <section>
+            <div class="row">
+                <f:if condition="{recipie.media}">
+                    <f:for each="{recipie.media}" as="image" iteration="iterator">
+                        <f:if condition="{iterator.cycle} >= 2">
+                            <f:image src="{image.originalResource.publicUrl}" class="rounded col-6 col-sm-4 col-md-3"
+                                     style="object-fit: cover; height: 100%;" maxWidth="400"/>
+                        </f:if>
+                    </f:for>
+                </f:if>
+            </div>
+            <h4 class="mt-2">
+                Zutaten für {recipie.portions} Portion(en)
+            </h4>
+            {recipie.description -> f:format.html()}
+            <p>
+                1 Portion entspricht ca. {recipie.calories} cal
+            </p>
+        </section>
+        <section>
+            <h4>
+                Zubereitung (ca. {recipie.preparationTime} min)
+            </h4>
+            {recipie.preparation -> f:format.html()}
+        </section>
+
+        <f:if condition="{recipie.reviews}">
+            <section class="row">
+                <h3>Kommentare</h3>
+
+                <f:for each="{recipie.reviews}" as="review">
+                    <f:render partial="Recipie/Review" arguments="{review:review}"/>
+                </f:for>
+
+            </section>
+        </f:if>
+
+    </article>
+
+    <br />
+
+    <f:link.page pageUid="{settings.recipie.listPage}"><< See all recipes</f:link.page>
+</f:section>
+
+</html>

@@ -1,0 +1,42 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<div class="col-12 col-md-6 mb-3">
+    <div class="card">
+        <f:if condition="{recipie.media}">
+            <f:for each="{recipie.media}" as="image" iteration="iterator">
+                <f:if condition="{iterator.index} == 0">
+                    <f:image src="{image.originalResource.publicUrl}" class="card-img-top" maxHeight="250"
+                             style="object-fit: cover; height: 200px;"/>
+                </f:if>
+            </f:for>
+        </f:if>
+        <div class="card-body">
+            <h5 class="card-title">
+                <f:for each="{recipie.countries}" as="country">
+                    <f:if condition="{country.flag.originalResource.publicUrl}">
+                        <f:link.action action="show" pageUid="{settings.country.detailPage}" controller="Country"
+                                       pluginName="Countries" arguments="{country : country}"
+                                       style="text-decoration: none;">
+                            <f:image src="{country.flag.originalResource.publicUrl}"
+                                     class="img-fluid rounded img-thumbnail" alt="..."
+                                     style="object-fit: cover; height: 100%;" maxWidth="40" maxHeight="30"/>
+                        </f:link.action>
+                    </f:if>
+                </f:for>
+                {recipie.title}
+                <v:iterator.loop count="{recipie.rating}">⭐</v:iterator.loop>
+
+            </h5>
+            <p class="card-text">⏰ {recipie.preparationTime} min - {recipie.teaser -> f:format.crop(maxCharacters: settings.cropMaxCharacters)}</p>
+            <p class="card-text">
+                <small class="text-muted">von {recipie.author}, 💬
+                    <f:count subject="{recipie.reviews}"></f:count>
+                    Kommentar(e)</small>
+            </p>
+            <f:link.action></f:link.action>
+            <f:link.action class="btn btn-primary" action="show" pageUid="{settings.recipie.detailPage}"
+                           pluginName="Default"  controller="Recipie" arguments="{recipie : recipie}">Rezept ansehen
+            </f:link.action>
+        </div>
+    </div>
+</div>
+</html>

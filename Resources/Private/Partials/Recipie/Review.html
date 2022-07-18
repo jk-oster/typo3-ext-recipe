@@ -1,0 +1,16 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="p-1  col-md-6 col-sm-12">
+    <div class="card">
+        <div class="card-header">
+            <v:iterator.loop count="{review.rating}">⭐</v:iterator.loop></small>
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">
+                {review.title}
+            </h5>
+            <p class="card-text">{review.description}</p>
+            <footer class="blockquote-footer">Schrieb {review.author} am {review.date -> f:format.date()}</footer>
+        </div>
+    </div>
+</div>

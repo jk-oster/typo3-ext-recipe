@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:recipies/Resources/Private/Language/locallang.xlf" date="2022-03-07T11:15:21Z" product-name="recipies">
+		<header/>
+		<body>
+			<trans-unit id="tx_recipies_domain_model_recipie" resname="tx_recipies_domain_model_recipie">
+				<source>Recipie</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.title" resname="tx_recipies_domain_model_recipie.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.author" resname="tx_recipies_domain_model_recipie.author">
+				<source>Author</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.rating" resname="tx_recipies_domain_model_recipie.rating">
+				<source>Rating</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.vegetarian" resname="tx_recipies_domain_model_recipie.vegetarian">
+				<source>Vegetarian</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.vegan" resname="tx_recipies_domain_model_recipie.vegan">
+				<source>Vegan</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.teaser" resname="tx_recipies_domain_model_recipie.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.media" resname="tx_recipies_domain_model_recipie.media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.description" resname="tx_recipies_domain_model_recipie.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.preparation" resname="tx_recipies_domain_model_recipie.preparation">
+				<source>Preparation</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.portions" resname="tx_recipies_domain_model_recipie.portions">
+				<source>Portions</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.preparation_time" resname="tx_recipies_domain_model_recipie.preparation_time">
+				<source>Preparation Time</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.calories" resname="tx_recipies_domain_model_recipie.calories">
+				<source>Calories</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.countries" resname="tx_recipies_domain_model_recipie.countries">
+				<source>Countries</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_recipie.reviews" resname="tx_recipies_domain_model_recipie.reviews">
+				<source>Reviews</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_country" resname="tx_recipies_domain_model_country">
+				<source>Country</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_country.title" resname="tx_recipies_domain_model_country.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_country.teaser" resname="tx_recipies_domain_model_country.teaser">
+				<source>Teaser</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_country.description" resname="tx_recipies_domain_model_country.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_country.flag" resname="tx_recipies_domain_model_country.flag">
+				<source>Flag</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_country.media" resname="tx_recipies_domain_model_country.media">
+				<source>Media</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_review" resname="tx_recipies_domain_model_review">
+				<source>Review</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_review.title" resname="tx_recipies_domain_model_review.title">
+				<source>Title</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_review.description" resname="tx_recipies_domain_model_review.description">
+				<source>Description</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_review.rating" resname="tx_recipies_domain_model_review.rating">
+				<source>Rating</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_review.date" resname="tx_recipies_domain_model_review.date">
+				<source>Date</source>
+			</trans-unit>
+			<trans-unit id="tx_recipies_domain_model_review.author" resname="tx_recipies_domain_model_review.author">
+				<source>Author</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

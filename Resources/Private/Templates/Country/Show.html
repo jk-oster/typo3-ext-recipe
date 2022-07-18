@@ -1,0 +1,63 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="content">
+    <article>
+        <h1>{country.title}
+            <f:if condition="{country.flag}">
+                <f:image src="{country.flag.originalResource.publicUrl}" class="img-fluid rounded img-thumbnail"
+                         style="object-fit: cover;" maxWidth="60" maxHeight="40"/>
+            </f:if>
+        </h1>
+
+        <p class="lead">{country.teaser}</p>
+
+        <f:if condition="{country.media}">
+            <div class="row mb-2">
+                <f:for each="{country.media}" as="mediaItem">
+                    <div class="col-12 col-sm-6 sol-md-4 overflow-hidden">
+                        <f:image src="{mediaItem.originalResource.publicUrl}" maxWidth="500"
+                                 loading="lazy" style="object-fit: cover; height: 100%;"/>
+                    </div>
+                </f:for>
+            </div>
+        </f:if>
+
+        {country.description -> f:format.html()}
+
+    </article>
+
+    <div>
+
+        <f:link.action
+                class="btn btn-primary"
+                pageUid="{settings.recipie.topPage}"
+                action="top"
+                pluginName="Top"
+                controller="Recipie"
+                arguments="{country: country}">Top Rezepte aus {country.title}</f:link.action>
+        <f:link.action
+                class="btn btn-primary"
+                pageUid="{settings.recipie.fastPage}"
+                action="fast"
+                pluginName="Fast"
+                controller="Recipie"
+                arguments="{country: country}">Die schnellsten Rezepte aus {country.title}</f:link.action>
+        <f:link.action
+                class="btn btn-primary"
+                pageUid="{settings.recipie.veganPage}"
+                action="vegan"
+                pluginName="Vegan"
+                controller="Recipie"
+                arguments="{country: country}">Vegane Rezepte aus {country.title}</f:link.action>
+    </div>
+
+    <hr class="my-3">
+
+    <h3>Alle Rezepte aus {country.title}</h3>
+    <f:render partial="Recipie/List" arguments="{recipies:recipies}"/>
+
+    <f:link.action action="list">Zurück zur Länderübersicht</f:link.action>
+    <br/>
+</f:section>
+</html>

@@ -1,0 +1,40 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<div class="mb-3 col-12">
+    <div class="card">
+        <div class="row g-0">
+            <f:if condition="{recipie.media}">
+                <div class="col-sm-4">
+                    <f:for each="{recipie.media}" as="image" iteration="iterator">
+                        <f:if condition="{iterator.index} == 0">
+                            <f:image src="{image.originalResource.publicUrl}" class="img-fluid rounded-start"  style="object-fit: cover; height: 100%;" maxWidth="560"/>
+                        </f:if>
+                    </f:for>
+                </div>
+            </f:if>
+            <div class="col-md-8">
+                <div class="card-body">
+                    <div class="card-title d-flex align-items-center">
+                        <f:for each="{recipie.countries}" as="country">
+                            <f:if condition="{country.flag.originalResource.publicUrl}">
+                                <f:link.action action="show" pageUid="{settings.country.detailPage}" controller="Country"  pluginName="Countries" arguments="{country : country}"  style="text-decoration: none;">
+                                    <f:image src="{country.flag.originalResource.publicUrl}" class="img-fluid rounded img-thumbnail" alt="..."
+                                             style="object-fit: cover; height: 100%;" maxWidth="40" maxHeight="30" />
+                                </f:link.action>
+                            </f:if>
+                        </f:for>
+                        <h5 class="ms-1">
+                            <f:link.action action="show" pageUid="{settings.recipie.detailPage}" pluginName="Default" controller="Recipie" arguments="{recipie : recipie}"  style="text-decoration: none;">{recipie.title}</f:link.action>
+                            <v:iterator.loop count="{recipie.rating}">⭐</v:iterator.loop>
+                        </h5>
+                    </div>
+                    <p class="card-text">⏰ {recipie.preparationTime} min - {recipie.teaser -> f:format.crop(maxCharacters: settings.cropMaxCharacters)}</p>
+                    <p class="card-text">
+                        <small class="text-muted">By {recipie.author}, 💬  <f:count subject="{recipie.reviews}"></f:count> comment(s)</small>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:form action="list" name="filter" object="{filter}">
+    <div  class="row">
+        <div class="col-12 col-md-6 col-lg-5">
+            <f:form.select property="preparationTime" name="PreparationTime" class="form-select" value="{filterSettings.filter.preparationTime}">
+                <f:form.select.option value="0">Alle Rezepte</f:form.select.option>
+                <f:for each="{filterSettings.preparationTimes}" as="time">
+                    <f:form.select.option value="{time}">{time} Minuten</f:form.select.option>
+                </f:for>
+            </f:form.select>
+        </div>
+        <div class="col-12 col-md-6 col-lg-5">
+            <f:form.select property="country" name="Country" class="form-select" value="{filterSettings.filter.country}">
+                <f:form.select.option value="0">Alle Länder</f:form.select.option>
+                <f:for each="{filterSettings.countries}" as="country">
+                    <f:form.select.option value="{country.uid}">{country.title}</f:form.select.option>
+                </f:for>
+            </f:form.select>
+        </div>
+        <div class="col-12 col-lg-2">
+            <f:form.submit value="Filtern" class="btn btn-primary" style="width: 100%;"/>
+        </div>
+    </div>
+</f:form>
+</html>

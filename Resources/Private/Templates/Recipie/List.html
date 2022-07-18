@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+<f:layout name="Default"/>
+
+<f:section name="content">
+    <h1>Rezepte der Welt</h1>
+
+    <f:render partial="Filter/Filter" arguments="{filterSettings:filterSettings}"></f:render>
+
+    <f:render partial="Recipie/List" arguments="{recipies:recipies}"/>
+
+</f:section>
+</html>

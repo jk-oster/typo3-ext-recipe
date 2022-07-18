@@ -1,0 +1,22 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
+
+<f:layout name="Default"/>
+
+<f:section name="content">
+  <f:if condition="{country}">
+    <p>
+      <f:link.page><< Zurück zur ungefilterten Liste</f:link.page>
+      Gefiltert nach <f:link.action action="show"
+                                    pageUid="{settings.country.detailPage}"
+                                    controller="Country"
+                                    pluginName="Countries"
+                                    arguments="{country : country}">{country.title}</f:link.action>
+    </p>
+  </f:if>
+  <h1>Vegane Rezepte</h1>
+
+  <f:render partial="Recipie/List" arguments="{recipies:recipies}"/>
+
+</f:section>
+
+</html>

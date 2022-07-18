@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<xliff version="1.0">
+	<file source-language="en" datatype="plaintext" original="EXT:recipies/Resources/Private/Language/locallang_csh_tx_recipies_domain_model_recipie.xlf" date="2022-03-07T11:15:21Z" product-name="recipies">
+		<header/>
+		<body>
+			<trans-unit id="title.description" resname="title.description">
+				<source>title</source>
+			</trans-unit>
+			<trans-unit id="author.description" resname="author.description">
+				<source>author</source>
+			</trans-unit>
+			<trans-unit id="rating.description" resname="rating.description">
+				<source>rating</source>
+			</trans-unit>
+			<trans-unit id="vegetarian.description" resname="vegetarian.description">
+				<source>vegetarian</source>
+			</trans-unit>
+			<trans-unit id="vegan.description" resname="vegan.description">
+				<source>vegan</source>
+			</trans-unit>
+			<trans-unit id="teaser.description" resname="teaser.description">
+				<source>teaser</source>
+			</trans-unit>
+			<trans-unit id="media.description" resname="media.description">
+				<source>media</source>
+			</trans-unit>
+			<trans-unit id="description.description" resname="description.description">
+				<source>description</source>
+			</trans-unit>
+			<trans-unit id="preparation.description" resname="preparation.description">
+				<source>preparation</source>
+			</trans-unit>
+			<trans-unit id="portions.description" resname="portions.description">
+				<source>portions</source>
+			</trans-unit>
+			<trans-unit id="preparation_time.description" resname="preparation_time.description">
+				<source>preparationTime</source>
+			</trans-unit>
+			<trans-unit id="calories.description" resname="calories.description">
+				<source>calories</source>
+			</trans-unit>
+			<trans-unit id="countries.description" resname="countries.description">
+				<source>countries</source>
+			</trans-unit>
+			<trans-unit id="reviews.description" resname="reviews.description">
+				<source>reviews</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>
